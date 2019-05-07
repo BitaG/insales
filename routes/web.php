@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/install','InsalesController@install');
+Route::get('/uninstall','InsalesController@uninstall');
+Route::get('/login','InsalesController@login');
+Route::get('/autologin','InsalesController@autologin');
+
+Route::get('/app','AppController@index');
+Route::get('/info','AppController@info');
