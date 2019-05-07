@@ -45,9 +45,6 @@ class IntegrationStatistic extends Command
         $last_day = Shop::where('created_at', '>=', Carbon::now()->subDays(1)->toDateTimeString())->count();
         $last_month = Shop::where('created_at', '>=', Carbon::now()->subDays(30)->toDateTimeString())->count();
 
-
-        $this->info('Connect from integration!');
-
         if(!empty($last_day)) {
             $this->line('Last day:'. $last_day);
         }
