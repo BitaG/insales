@@ -48,7 +48,7 @@ class InsalesController extends Controller
 
         if($shop_id == null) {
             Log::error('InSales | Uninstall: dont have shop_id in request');
-            return response()->json('Forbidden', 400);
+            return response()->json('Bad request', 400);
         }
 
         $shop = Shop::where('shop_id', $shop_id)->first();
