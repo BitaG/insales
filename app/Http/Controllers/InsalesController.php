@@ -69,6 +69,10 @@ class InsalesController extends Controller
         $sessionShopId  = $request->session()->get('shopId');
         $cookieShopId   = $request->cookie('shopId');
         $shopId         = $request->insales_id;
+        if (empty($shopId)) {
+            Log::error('InSales | Login: dont have shop');
+            return response()->json('Bad request', 400);
+        }
 
         $shop           = Shop::where('shop_id', $shopId)->first();
 
