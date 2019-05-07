@@ -18,8 +18,8 @@ class CreateShopsTable extends Migration
             $table->bigInteger('shop_id');//shop id
             $table->string('password');//shop pass
             $table->string('shop');//shop url
-            $table->string('sp_client_id'); //SP client api ID
-            $table->string('sp_client_secret'); // sp client api SECRET
+            $table->string('sp_client_id')->nullable(); //SP client api ID
+            $table->string('sp_client_secret')->nullable(); // sp client api SECRET
             $table->timestamps();
         });
     }
