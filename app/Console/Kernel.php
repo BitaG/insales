@@ -13,7 +13,9 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        Commands\IntegrationStatistic::class
+        Commands\IntegrationStatistic::class,
+        Commands\ShopDrop::class,
+        Commands\ShopInfo::class,
     ];
 
     /**

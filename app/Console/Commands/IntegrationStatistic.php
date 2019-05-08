@@ -13,7 +13,7 @@ class IntegrationStatistic extends Command
      *
      * @var string
      */
-    protected $signature = 'statistic:connect';
+    protected $signature = 'statistic';
 
     /**
      * The console command description.
